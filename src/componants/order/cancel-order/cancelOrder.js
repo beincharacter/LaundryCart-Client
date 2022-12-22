@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import "./cancelOrder.css"
+import "./cancelOrder.css";
+const API = process.env.REACT_APP_API || "http://localhost:5000"
 
 const CancelOrder = (props) => {
     
     const cancelOrder = async () =>{
         const token = localStorage.getItem("token");
-        console.log("calllll")
-        await fetch(`http://localhost:5000/updateorder/${props.orderId}`,{
+        
+        await fetch(`${API}/updateorder/${props.orderId}`,{
             method: "PUT",
             headers : {
                 Authorization: token
@@ -17,9 +18,9 @@ const CancelOrder = (props) => {
      
         const tempOrders = props.ordersDetail.map((data)=>{
             if(data._id == props.orderId){
-                data.status = 'canceled'
+                data.status = 'canceled';
             }
-            return data
+            return data;
         })
         props.setOrderDetail(tempOrders)
         console.log(props.ordersDetail)
