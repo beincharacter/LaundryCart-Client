@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+/* -------summary_holder------ */
+#summary_holder{
+    width: 98.9vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+/* --------Summary_page------- */
+
+#summary_page{
+    float: right;
+    background-color: white;
+    width: 60%;
+    height: 100vh;
+}
+/* -------------- summary_header ------------------- */
+#summary_header{
+    background-color: #5861AE;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+#summary_header>*{
+    font-size: 1.3em;
+    
+}
+#summary_header>h3{
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+#summary_header>i{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* -----------Store_addrs------------ */
+
+.store_addrs{
+    background-color: #F4F9FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store_addrs>select{
+    margin-left: 20px;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    background-color: inherit;
+
+}
+
+.store_addrs>dl{
+    margin-right: 30px;
+}
+
+
+/* ------------order_details--------------- */
+
+.order_details{
+    height: 45vh;
+}
+
+.summary_sub_total,.summary_pickup{
+    text-align: end;
+}
+
+.total_price{
+    background-color: #5861AE;
+    color:white;
+    text-align: end;
+    font-size: 1.3em;
+    position: relative;
+    bottom: -60%;
+    padding: 10px;
+}
+
+/* -----------Address------------- */
+.address_title{
+    margin: 20px;
+}
+.address_container{
+    display: flex;
+    
+}
+
+.address_container> address{
+    border: 1px solid #5861AE;
+    height: 70px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 10px 20px ;
+    box-shadow: 1px 1px 8px;
+}
+.address_container> address>*{
+    margin-left: 10px;
+}
+
+.address_btn{
+    border: 0;
+    background-color: inherit;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #5861AE;
+}
+
+/* --------- summary_confirm ------------ */
+
+.summary_confirm{
+    position: relative;
+    bottom: -5%;
+    float: right;
+    margin-right: 15px;
+    color: white;
+    background-color: #5861AE;
+    width: 80px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+}

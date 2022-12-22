@@ -4,7 +4,7 @@ import "./mainOrderDashboard.css"
 import OrderNavBar from "./navbar/navbar";
 import CancelOrder from "./cancel-order/cancelOrder";
 import FooterOrder from "./footer/footer";
-import {useNavigate} from "react-router-dom";
+import {Link,useNavigate} from "react-router-dom";
 
 const OrderMain = () => {
     const navigate = useNavigate()
@@ -36,7 +36,7 @@ const OrderMain = () => {
                         </> :
                         <>
                             <span className="orders-num"><b>Orders | {ordersDetail.length}</b></span>
-                            <span><button className="some-create-btn">Create</button></span>
+                            <span><Link to={"/createorder"}><button className="some-create-btn">Create</button></Link></span>
                             <span><input type="text" className="search-bar"></input><i className="search-icon fa fa-search"></i></span>
                         </>
                     }                    
@@ -49,7 +49,7 @@ const OrderMain = () => {
                     <>
                         <div className="zero-order-page-main">
                     <p>No Order Available</p>
-                    <button className="create-btn">Create</button>
+                    <Link to={"/createorder"}><button className="create-btn">Create</button></Link>
                 </div>
                     </> :
                     <>
